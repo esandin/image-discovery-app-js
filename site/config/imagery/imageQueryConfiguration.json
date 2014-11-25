@@ -2,27 +2,50 @@
     "userAddCatalogMode": false,
     "imageQueryLayers": [
         {
-            "url": "http://imagery.arcgisonline.com/arcgis/rest/services/LandsatGLS/LandsatMaster/ImageServer",
-            "label": "LandsatGLS",
+            "url": "http://www.actmapi.act.gov.au/actmapi/rest/services/mga/dopm2004mga/ImageServer",
+            "label": "ACTMAPi2004",
+            "queryWhereClauseAppend": "Category = 1",
+            "supportsThumbnails": true
+        },
+        {
+            "url": "http://www.actmapi.act.gov.au/actmapi/rest/services/mga/dopm2009mga/ImageServer",
+            "label": "ACTMAPi2009",
+            "queryWhereClauseAppend": "Category = 1",
+            "supportsThumbnails": true
+        },
+        {
+            "url": "http://www.actmapi.act.gov.au/actmapi/rest/services/mga/dopm2012mga/ImageServer",
+            "label": "ACTMAPi2012",
+            "queryWhereClauseAppend": "Category = 1",
+            "supportsThumbnails": true
+        },
+        {
+            "url": "http://www.actmapi.act.gov.au/actmapi/rest/services/mga/dopm2014mga/ImageServer",
+            "label": "ACTMAPi2014",
             "queryWhereClauseAppend": "Category = 1",
             "supportsThumbnails": true
         }
-
     ],
     "imageDiscoveryQueryFields": [
+        {
+            "field": "ProductName",
+            "label": "Product"
+        },
+        {
+            "field": "Tag",
+            "label": "Tag"
+        },
+        {
+            "field": "GroupName",
+            "label": "GroupName"
+        },
+        {
+            "field": "ProductName",
+            "label": "ProductName"
+        },
 
     ],
     "imageQueryResultDisplayFields": [
-        {
-            "field": "OBJECTID",
-            "label": "id",
-            "filter": {
-                "enable": false
-            },
-            "gridOptions": {
-                "hiddenOnDisplay": true
-            }
-        },
         {
             "field": "Name",
             "label": "Name",
@@ -31,36 +54,35 @@
             },
             "style": {
                 "color": "blue",
-                "fontSize": "8pt"
+                "fontSize": "10pt"
             },
             "gridOptions": {
                 "canHide": true
             }
         },
         {
-            "field": "Raster_Path",
-            "label": "Path",
+            "field": "Tag",
+            "label": "Tag",
             "filter": {
-                "enable": true,
-                "unitsLabel": "m"
+                "enable": true
             },
-            "style": {
-                "fontSize": "8pt"
+            "gridOptions": {
+                "canHide": true
+            }
+        },
+        {
+            "field": "GroupName",
+            "label": "GroupName",
+            "filter": {
+                "enable": true
             },
-            "processing": {
-                "treatAsLink": true
+            "gridOptions": {
+                "canHide": true
             }
         },
         {
             "field": "ProductName",
-            "label": "Product",
-            "filter": {
-                "enable": true
-            }
-        },
-        {
-            "field": "Tag",
-            "label": "Tag",
+            "label": "ProductName",
             "filter": {
                 "enable": true
             }

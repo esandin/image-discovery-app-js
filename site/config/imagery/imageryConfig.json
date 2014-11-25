@@ -1,5 +1,5 @@
 {
-    "windowTitle": "Base Configuration Application",
+    "windowTitle": "Test Image Discovery TAMS",
     "portal": {
         "url": "http://www.arcgis.com"
     },
@@ -27,6 +27,15 @@
         "overview": {
             "create": false
         },
+                "initialExtent": {
+                    "xmin": 148.8,
+                    "ymin": -35.6,
+                    "xmax": 149.3,
+                    "ymax": -35.1,
+                    "spatialReference": {
+                        "wkid": 4326
+                    }
+                },
         "useBasemapGallery": true,
         "basemapGalleryDefault": "Streets",
         "configuredPortalBasemapsGroupId": "eab708d46fbb44c39a07e30f1bfe2345",
